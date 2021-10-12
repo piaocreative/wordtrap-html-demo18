@@ -1,0 +1,22 @@
+/* ----------------------------------------------------------------
+
+	Contact.scss
+
+-----------------------------------------------------------------*/
+#contact-info {
+	label {
+		color: #a2a2a2;
+		font-size: 0.875rem;
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	input, textarea {
+		background-color: #313131;
+		font-size: 0.875rem;
+	}
+
+	::placeholder {
+		color: #555555;
+	}
+}

@@ -1,0 +1,351 @@
+
+/* ----------------------------------------------------------------
+
+	header.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Header
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for header. Thanks!
+-----------------------------------------------------------------*/
+
+
+#header {
+	position: relative;	
+
+	// Transparent header
+	&.transparent-header {
+		background: transparent;
+		z-index: 199;
+
+		& + #content, & + #error-404 {
+			position: relative;
+			top: -$header-height;
+			margin-bottom: -$header-height;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Logo
+-----------------------------------------------------------------*/
+
+.navbar-brand {
+	margin-right: 2.5rem;
+
+	img {
+		max-width: 5.0625rem;		
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Navbar Toggler
+-----------------------------------------------------------------*/
+
+.navbar-light .navbar-toggler {
+	border: 0;
+	border-radius: 0;
+	margin-right: auto;
+
+	@include media-breakpoint-up(lg) {
+		margin-right: 3.5rem;
+	}	
+}
+
+
+/* ----------------------------------------------------------------
+	Primary Menu
+-----------------------------------------------------------------*/
+
+#primary-menu {
+	.nav-link {
+		color: $primary-menu-font-color;
+		font-family: $body-font;
+		font-size: $primary-menu-font-size;
+		font-weight: $primary-menu-font-weight;		
+		letter-spacing: $primary-menu-font-spacing;
+		text-transform: $primary-menu-font-tt;
+	}
+
+	.nav-item {
+		&:hover {
+			a {
+				color: $theme-color;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Mega Menu
+-----------------------------------------------------------------*/
+
+// Please ignore mega menu now 
+
+
+/* ----------------------------------------------------------------
+	Top Buttons
+-----------------------------------------------------------------*/
+
+
+#top-btns {
+	.nav-link {
+		font-family: $body-font;
+		font-size: 0.875rem;	
+		color: $white;		
+		line-height: 1;
+		padding: 0.7rem;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $primary;
+		}
+
+		[data-cart-items] {
+			position: relative;
+			display: inline-block;
+
+			&::before {
+				content: attr(data-cart-items);
+				position: absolute;
+				top: -.5rem;
+				right: -.75rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 19px;
+				height: 19px;
+				font-size: 11px;
+				font-weight: 500;
+				border-radius: 50%;
+				border: 1px solid #fff;
+				background-color: #ff6f61;
+				color: #fff;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Top Links
+-----------------------------------------------------------------*/
+
+#top-links {
+	.nav-item {			
+		@include media-breakpoint-up(lg) {
+			padding: .875rem;
+		}
+	}
+
+	a.nav-link {
+		color: $white;
+		display: block;
+		font-size: 0.875rem;
+		font-family: $body-font;	
+		font-weight: 700;
+		text-transform: uppercase;
+
+		@include media-breakpoint-up(lg) {
+			padding: 0;	
+		}
+
+		&:hover {
+			color: $theme-color;
+		}
+	}
+
+	.dropdown-toggle {
+		&::after {
+			margin-left: .75em;
+		}
+	}
+
+	.dropdown-menu {
+		background: $white;
+		border: 0;
+		top: $topbar-line-height;
+		left: 0;
+		width: 100%;		
+		margin: 0;
+		border-top: 3px solid $theme-color;
+
+		@include border-radius(0);
+
+		@include box-shadow(0 0 5px -1px rgba($black, 0.2));
+		
+		@include media-breakpoint-up(lg) {
+			width: 8.75rem;
+		}
+
+		a.dropdown-item {
+			color: $heading-color;
+			height: 2.25rem;
+			line-height: 2.25rem;
+			font-size: 0.75rem;				
+			padding: 0 0.75rem;
+
+			&:hover {
+				color: $theme-color;
+			}
+		}
+
+		img {
+			display: inline-block;
+			position: relative;
+			top: -1px;
+			width: 1rem;
+			height: 1rem;
+			margin-right: 0.25rem;
+		}
+	}
+}
+
+#top-search {
+	min-width: 31.5625rem;
+
+	input {
+		border-radius: 2rem;
+		background-color: #f9f9f9;
+	}
+
+	.input-group-addon  {
+		position: relative;
+		right: 2.25rem;
+		top: 1.1rem;
+		color: #242424;
+	}
+}
+
+/* ----------------------------------------------------------------
+	Top Infos
+-----------------------------------------------------------------*/
+
+#top-infos {
+	display: flex;
+
+	.phone-number {
+		margin-right: 2.875rem;
+		
+		a {
+			color: $topbar-color;
+			margin-left: 1.75rem;
+
+			&:hover {
+				color: $topbar-hover-color;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Top Social
+-----------------------------------------------------------------*/
+
+#top-social,
+#top-social ul { margin: 0; }
+
+#top-social {
+	.top-social-title {
+		position: relative;
+		font-family: $body-font;
+		font-size: 1rem;
+		transform: rotate(270deg);
+		color: #707070;
+		white-space: nowrap;
+	}
+
+	ul {
+		position: relative;
+		margin-top: 4rem;
+	}
+
+	li {
+		padding: 0 0.25rem;
+		margin-bottom: 1rem;
+
+		a {
+			border-radius: 50%;
+			color: $white;
+			display: inline-block;
+			line-height: 1.8125rem;
+			width: 1.8125rem;
+			height: 1.8125rem;		
+			vertical-align: middle;
+			text-align: center;
+
+			&:hover {
+				color: $theme-color;
+			}
+
+			i {
+				vertical-align: top;
+				line-height: 1.8125rem;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+		position: relative;
+		display: flex;
+
+		.top-social-title {
+			position: relative;
+			bottom: 0;
+			right: 0;
+			transform: rotate(0);
+		}
+
+		ul {
+			display: flex;
+			margin: 0;
+
+			li {
+				a {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+
+/* ----------------------------------------------------------------
+	Top Login
+-----------------------------------------------------------------*/
+
+
+
+/* ----------------------------------------------------------------
+	Top Search
+-----------------------------------------------------------------*/
+
+
+
+
+/* ----------------------------------------------------------------
+	Top Cart
+-----------------------------------------------------------------*/
+
+
+
+
+/* ----------------------------------------------------------------
+	Top Account
+-----------------------------------------------------------------*/
+
+
+
+
+
+

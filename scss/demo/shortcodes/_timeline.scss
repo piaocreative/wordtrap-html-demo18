@@ -1,0 +1,55 @@
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: timeline.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Timeline Styles
+-----------------------------------------------------------------*/
+.events {
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: $white;
+        top: 0;
+        left: 50%;
+        z-index: -1;
+
+        @include media-breakpoint-down(lg) {
+            width: 0;
+        }
+    }
+}
+
+.event {
+    margin-bottom: 4rem;
+
+    .event-detail {
+        position: relative;
+
+        .event-date {
+            font-weight: 700;
+            font-size: $h1-font-size;
+            color: transparent;
+            -webkit-text-stroke: 0.5px rgba(#fff, 0.5);
+            line-height: 1;
+        }
+
+        .event-title {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: $white;
+            position: absolute;
+            top: 1.75rem;
+            left: 2rem;
+            text-transform: uppercase;
+        }
+    }
+}

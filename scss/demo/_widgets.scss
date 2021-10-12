@@ -1,0 +1,199 @@
+
+/* ----------------------------------------------------------------
+
+	widgets.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Widgets
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for widgets. Thanks!
+-----------------------------------------------------------------*/
+
+
+.widget {
+	position: relative;
+
+	p {
+		font-weight: 700;
+		line-height: 1.5;
+		color: $white;
+		font-size: 0.875rem;
+	}
+
+	.widget-title {
+		font-family: $body-font;
+		font-size: 0.875rem;
+		font-weight: 700;
+		color: $white;		
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+	}	
+
+	// Widget - Social
+	&.widget-social {
+
+		.widget-content {
+			p {
+				color: $white;
+				font-size: 1.125rem;
+				display: block;
+				font-family: $heading-font;
+			}
+
+			.social-icons {
+
+				padding: 0;
+				list-style: none;
+				margin-top: -0.5rem;
+	
+				li {
+					padding: 0 0.25rem;
+	
+					&:last-child {
+						padding-right: 0;
+					}
+			
+					a {
+						color: $white;		
+						display: inline-block;
+						line-height: 1.8125rem;	
+						font-size: 1.5rem;
+						vertical-align: middle;
+						text-align: center;
+						border-radius: 0.5rem;	
+	
+						@include transition(all 0.3s ease-in-out);
+			
+						&:hover {
+							color: $theme-color;
+						}
+			
+						img {
+							border-radius: 0.5rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Widget - Links
+	&.widget-links {
+		ul {
+			list-style: none;
+
+			li {
+				margin-bottom: 0.35rem;
+
+				a {
+					color:#8d8d8d;
+					font-size: 0.875rem;
+
+					&:hover {
+						color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+
+		&.widget-links {
+
+			.widget-content {
+				justify-content: space-between;
+			}
+
+			ul {
+				width: auto;
+				margin: auto;
+			}
+		}
+}
+
+	// Widget - Payments
+	&.widget-payment {
+		p {
+			color: $white;
+			font-size: 1.125rem;
+			display: block;
+			font-family: $heading-font;
+		}
+		.payments {
+
+			.payment-icon {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: .5rem;
+				padding: 0.2rem;
+				background-size: 80% auto;
+				background-repeat: no-repeat;
+				background-position: center;
+				border-radius: 0.5rem;
+
+				img {
+					width: 2rem;
+				}
+			}
+		}
+	}
+
+	// Widget - custom html
+	&.widget-custom-html {
+		.widget-content {
+			a {
+				font-size: 0.875rem;
+			}
+
+			span {
+				font-size: 0.75rem;
+				color: #b1b1b1;
+			}
+		}
+	}
+
+	&.widget-subscribe {
+		.widget-content {
+			p {
+				font-size: 1.125rem;
+			}
+
+			#widget-subscribe-form {
+				.input-group-append {
+					margin-left: -2rem;
+				}
+
+				.input-group {
+					input {
+						font-size: 1.0625rem;
+					}
+
+					button {
+						border-radius: 2rem;
+						padding: 1.5rem 4.5rem;
+						font-size: 0.875rem;
+						box-shadow: -5px 6px 2px -4px #c49c53;
+						background: linear-gradient(120deg, #e3b96c 40%, #e8d3ac, #e3b96c 70%);
+
+						i {
+							font-size: 0.9rem;
+							margin-left: 0.5rem;
+						}
+					}
+				}
+			}
+
+			::placeholder {
+				color: #6a6a6a;
+				opacity: 1; /* Firefox */
+			}
+		}
+	}
+}

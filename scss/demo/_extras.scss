@@ -1,0 +1,108 @@
+
+/* ----------------------------------------------------------------
+
+	extras.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Extra Styles
+-----------------------------------------------------------------*/
+
+.shipping-banner {
+	position: absolute;
+	left: 4.375rem;
+	top: 5.625rem;	
+}
+
+.link-icon {
+	background-image: url(../images/icons/link.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 2.5625rem;
+	height: 2.5625rem;
+
+	&.black {
+		background-image: url(../images/icons/link_black.png);
+	}
+}
+
+a {
+	.link-icon {
+		@include transition(all 0.3s ease-in-out);
+	}
+
+	&:hover {
+		.link-icon {
+			@include translateX(1rem);
+		}
+	}	
+}
+
+.about-detail {
+	position: absolute;
+	right: -2rem;
+	bottom: -1rem;
+	min-width: 34rem;
+
+	@include media-breakpoint-down(lg) {
+		position: relative;
+		right: 0;
+		bottom: 0;
+		min-width: 100%;
+	}
+}
+
+.page-links {
+	font-size: 1rem;
+    font-weight: 700;
+	text-transform: uppercase;
+	color: #777777;
+	display: inline-block;
+	border: 1px solid #777777;
+    border-radius: 50%;
+	width: 8rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// slider items//
+.slick-prev::before, .slick-next:before {
+	font-size: 1.5rem;
+	opacity: 1;
+	color:#dcdcdc;
+
+	@include media-breakpoint-down(lg) {
+	   display: none;
+   }
+}
+
+.slick-prev {
+	left: -4rem;
+}
+
+.slick-next {
+	right: -4rem;
+}
+
+.slick-slide {
+	height: auto;
+}
+
+.slider-control {
+	a {
+		color: #8d8d8d;
+	
+		&:hover {
+			color: $theme-color;
+		}
+	}
+
+	@include media-breakpoint-down(lg) {
+		display: none !important;
+	}
+}

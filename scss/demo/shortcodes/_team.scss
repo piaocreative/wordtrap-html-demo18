@@ -1,0 +1,27 @@
+.team {
+    .team-name {
+        font-family: $body-font;
+        font-weight: 700;
+        color: $white;
+    }
+
+    .team-meta {
+        font-size: 0.875rem;
+        color: #707070;
+    }
+
+    .team-info {
+        p {
+            color: $white;
+        }
+    }
+
+    .team-details {
+        padding: 0 2rem;
+    }
+}
+
+.team-image {
+    width: 100%;
+    height: auto;
+}
