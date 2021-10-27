@@ -16,26 +16,17 @@
 -----------------------------------------------------------------*/
 
 
-#banner {
+.banner {
     position: relative;
-    padding-bottom: 5.5rem;
     background-color: #1a1a1a;
-
-    img {
-        width: 100%;
-        height: 57rem;
-        object-fit: cover;
-        object-position: center;
-    }
 
     .banner-wrap {
         padding-left: 4.375rem;
         padding-right: 4.375rem;
     }
 
-    &.about-banner {
-        img {
-            height: 20rem;
-        }
+    &#about-banner, &#contact-banner {
+        padding-top: 7.375rem;
+        padding-bottom: 4.5rem;
     }
 }
