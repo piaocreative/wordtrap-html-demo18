@@ -39,7 +39,7 @@
             font-size: $h1-font-size;
             color: transparent;
             -webkit-text-stroke: 0.5px rgba(#fff, 0.5);
-            line-height: 1;
+            line-height: 0.875;
         }
 
         .event-title {
@@ -47,7 +47,7 @@
             font-size: 1.5rem;
             color: $white;
             position: absolute;
-            top: 1.75rem;
+            top: 1.5rem;
             left: 2rem;
             text-transform: uppercase;
         }

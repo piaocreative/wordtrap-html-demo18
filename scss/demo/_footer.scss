@@ -16,18 +16,13 @@
 
 #footer {
 	background-color: #1a1a1a;
+	border: 1px solid rgba(#ffffff, .5);
 }
 
 #footer-main {
 	padding-top: 4rem;
-
-	.border-start {
-		border: 0 !important;
-
-		@include media-breakpoint-up(lg) {
-			border-left: 1px solid #3c393b !important;
-		}
-	}
+	padding-bottom: 2rem;
+	border-bottom: 1px solid rgba(#ffffff, .1);
 }
 
 #footer-bottom {
